@@ -1,11 +1,11 @@
 {
-  "name": "Tezori",
-  "version": "0.1.0",
-  "network": "zeronet",
-  "blockExplorerHost": "http://zeronet.tzscan.io/",
+  "name": "Galleon",
+  "version": "0.2.0b",
+  "network": "betanet",
+  "blockExplorerHost": "http://tzscan.io/",
   "logo": "tezosLogo.svg",
   "icon": "tezos",
-  "termsService": "https://github.com/Cryptonomic/Tezori",
-  "privacyPolicy": "https://github.com/Cryptonomic/Tezori",
-  "tagline": "A community wallet for Tezos"
+  "termsService": "https://github.com/Cryptonomic/Deployments/raw/master/Terms_of_Service.pdf",
+  "privacyPolicy": "https://github.com/Cryptonomic/Deployments/raw/master/Privacy_Policy.pdf",
+  "tagline": ""
 }
