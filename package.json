@@ -40,7 +40,6 @@
     ]
   },
   "build": {
-    "productName": "Tezori",
     "appId": "tech.cryptonomic.Tezori",
     "extraResources": [
       "./extraResources/**/*"
