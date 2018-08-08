@@ -1,6 +1,5 @@
 {
   "name": "Tezori",
-  "productName": "Tezori",
   "version": "0.2.0b",
   "description": "A community wallet for Tezos",
   "scripts": {
