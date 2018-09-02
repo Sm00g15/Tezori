@@ -1,6 +1,6 @@
 {
   "name": "Tezori",
-  "version": "0.2.0b",
+  "version": "0.3.0b",
   "description": "A community wallet for Tezos",
   "scripts": {
     "build": "npm run check-wallet-state && concurrently \"npm run build-main\" \"npm run build-renderer\"",

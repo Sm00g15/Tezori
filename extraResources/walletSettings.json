@@ -1,7 +1,7 @@
 {
   "tezosSelectedNode": "Cryptonomic-Nautilus",
   "conseilSelectedNode": "Cryptonomic-Conseil",
-  "list": [
+  "nodesList": [
     {
       "name": "Cryptonomic-Nautilus",
       "type": "TEZOS",
