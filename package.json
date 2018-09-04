@@ -42,9 +42,6 @@
   },
   "build": {
     "appId": "tech.cryptonomic.Tezori",
-    "extraResources": [
-      "./extraResources/**/*"
-    ],
     "files": [
       "dist/",
       "node_modules/",
@@ -139,6 +136,7 @@
     "babel-register": "^6.26.0",
     "chalk": "^2.4.1",
     "concurrently": "^3.5.1",
+    "copy-webpack-plugin": "^4.5.2",
     "cross-env": "^5.1.6",
     "cross-spawn": "^6.0.5",
     "css-loader": "^0.28.11",
@@ -202,7 +200,7 @@
     "@material-ui/core": "^1.5.0",
     "@material-ui/icons": "^2.0.2",
     "classnames": "^2.2.6",
-    "conseiljs": "^0.1.27-z",
+    "conseiljs": "^0.1.25",
     "devtron": "^1.4.0",
     "downshift": "^2.0.19",
     "electron-debug": "^2.0.0",
