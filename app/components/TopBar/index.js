@@ -41,7 +41,7 @@ const AppName = styled.h1`
   font-stretch: normal;
   font-size: 72px;
   font-weight: 300;
-  line-height: 85px;
+  line-height: 25px;
   letter-spacing: 5px;
   margin: 0 auto;
   color: ${({ theme: { colors } }) => colors.primary};

@@ -197,7 +197,7 @@ const MainContainers = styled.div`
 
 const CardContainer = styled.div`
   width: 399px;
-  height: 470px;
+  height: 465px;
   border-radius: 5px;
   background-color: ${({ theme: { colors } }) => colors.white};
   box-shadow: 0 2px 4px 0 ${({ theme: { colors } }) => colors.gray13};
@@ -210,8 +210,8 @@ const CardContainer = styled.div`
 `;
 
 const CardImg = styled.img`
-  width: 38%;
-  height: 38%;
+  width: 40%;
+  height: 40%;
 `;
 
 const CardTitle = styled.div`
