@@ -6,6 +6,7 @@ import { withRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import { getWalletName } from '../../reduxContent/wallet/selectors';
 import SettingsController from '../SettingsController/';
+// import { tagline } from '../../config.json';
 import { ms } from '../../styles/helpers';
 import Logo from './../Logo';
 
@@ -32,6 +33,32 @@ const Text = styled.span`
   letter-spacing: 0.9px;
 `;
 
+const AppName = styled.h1`
+  text-align: center;
+  width: 100%;
+  font-family: 'Roboto', san-serif;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 72px;
+  font-weight: 300;
+  line-height: 85px;
+  letter-spacing: 5px;
+  margin: 0 auto;
+  color: ${({ theme: { colors } }) => colors.primary};
+`;
+
+// const AppSubtitle = styled.h2`
+//   text-align: center;
+//   font-family: 'Roboto', san-serif;
+//   font-style: normal;
+//   font-stretch: normal;
+//   font-size: 1.2rem;
+//   font-weight: 300;
+//   line-height: 1.2rem;
+//   letter-spacing: 0.25rem;
+//   color: ${({ theme: { colors } }) => colors.primary};
+// `;
+
 type Props = {
   onlyLogo: boolean | void,
   walletName: string
@@ -46,6 +73,9 @@ class TopBar extends Component<Props> {
         <InfoContainer>
           <Logo />
           <Text>{walletName}</Text>
+        </InfoContainer>
+        <InfoContainer>
+          <AppName>Tezori</AppName>
         </InfoContainer>
         <SettingsController onlySettings={onlyLogo} />
       </Container>
