@@ -33,41 +33,14 @@ const Text = styled.span`
   letter-spacing: 0.9px;
 `;
 
-const AppName = styled.h1`
-  text-align: center;
-  width: 100%;
-  font-family: 'Roboto', san-serif;
-  font-style: normal;
-  font-stretch: normal;
-  font-size: 72px;
-  font-weight: 300;
-  line-height: 25px;
-  letter-spacing: 5px;
-  margin: 0 auto;
-  color: ${({ theme: { colors } }) => colors.primary};
-`;
-
-// const AppSubtitle = styled.h2`
-//   text-align: center;
-//   font-family: 'Roboto', san-serif;
-//   font-style: normal;
-//   font-stretch: normal;
-//   font-size: 1.2rem;
-//   font-weight: 300;
-//   line-height: 1.2rem;
-//   letter-spacing: 0.25rem;
-//   color: ${({ theme: { colors } }) => colors.primary};
-// `;
-
 type Props = {
   onlyLogo: boolean | void,
-  walletName: string,
-  location: object
+  walletName: string
 };
 
 class TopBar extends Component<Props> {
   render() {
-    const { onlyLogo, walletName, location } = this.props;
+    const { onlyLogo, walletName } = this.props;
 
     return (
       <Container onlyLogo={onlyLogo}>
@@ -75,13 +48,6 @@ class TopBar extends Component<Props> {
           <Logo />
           <Text>{walletName}</Text>
         </InfoContainer>
-        {location.pathname === '/login' ? (
-          <InfoContainer>
-            <AppName>Tezori</AppName>
-          </InfoContainer>
-        ) : (
-          ''
-        )}
         <SettingsController onlySettings={onlyLogo} />
       </Container>
     );

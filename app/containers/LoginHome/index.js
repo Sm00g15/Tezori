@@ -11,7 +11,7 @@ import Button from '../../components/Button/';
 import Checkbox from '../../components/Checkbox/';
 import TermsModal from '../../components/TermsModal/';
 import LanguageSelectModal from '../../components/LanguageSelectModal';
-import { name } from '../../config.json';
+import { name, tagline } from '../../config.json';
 import { wrapComponent } from '../../utils/i18n';
 import { setLocale } from '../../reduxContent/settings/thunks';
 import { getLocale } from '../../reduxContent/settings/selectors';
@@ -41,19 +41,20 @@ const SectionContainer = styled.div`
   flex-direction: column;
   overflow-y: hidden;
   overflow-x: hidden;
+  margin-top: -20px;
 `;
 
 const TermsAndPolicySection = styled.div`
   display: flex;
   width: 80%;
-  padding: ${ms(2)} 0 ${ms(2)} 0;
+  padding: ${ms(2)} 0 0 0;
   border-top-width: 1px;
   border-top-color: ${({ theme: { colors } }) => colors.index1};
   border-top-style: solid;
   justify-content: center;
   align-items: center;
   font-weight: 300;
-  margin-top: 2%;
+  margin-top: 1%;
 `;
 
 const Strong = styled.span`
@@ -77,6 +78,34 @@ const Tip = styled.div`
   font-weight: 300;
   letter-spacing: 0.6px;
   text-align: left;
+  color: ${({ theme: { colors } }) => colors.primary};
+`;
+
+const AppName = styled.h1`
+  text-align: center;
+  width: 100%;
+  font-family: 'Roboto', san-serif;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 4.5vw;
+  font-weight: 300;
+  line-height: 50px;
+  letter-spacing: 5px;
+  margin: 0 auto;
+  color: ${({ theme: { colors } }) => colors.primary};
+`;
+
+const AppSubtitle = styled.h2`
+  text-align: center;
+  width: 100%;
+  font-family: 'Roboto', san-serif;
+  font-style: normal;
+  font-stretch: normal;
+  font-size: 1.5vw;
+  font-weight: 300;
+  line-height: 1.2rem;
+  letter-spacing: 0.25rem;
+  margin: 0.5rem auto 1.5rem;
   color: ${({ theme: { colors } }) => colors.primary};
 `;
 
@@ -197,7 +226,7 @@ const MainContainers = styled.div`
 
 const CardContainer = styled.div`
   width: 399px;
-  height: 465px;
+  height: 425px;
   border-radius: 5px;
   background-color: ${({ theme: { colors } }) => colors.white};
   box-shadow: 0 2px 4px 0 ${({ theme: { colors } }) => colors.gray13};
@@ -210,8 +239,8 @@ const CardContainer = styled.div`
 `;
 
 const CardImg = styled.img`
-  width: 40%;
-  height: 40%;
+  width: 38%;
+  height: 38%;
 `;
 
 const CardTitle = styled.div`
@@ -322,6 +351,10 @@ class LoginHome extends Component<Props> {
     return (
       <SectionContainer>
         <DefaultContainer>
+          <Section>
+            <AppName>{name}</AppName>
+            <AppSubtitle>{t(tagline)}</AppSubtitle>
+          </Section>
           <Section>
             <MainContainers>
               <CardContainer>
