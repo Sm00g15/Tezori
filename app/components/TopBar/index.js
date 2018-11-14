@@ -61,12 +61,13 @@ const AppName = styled.h1`
 
 type Props = {
   onlyLogo: boolean | void,
-  walletName: string
+  walletName: string,
+  location: object
 };
 
 class TopBar extends Component<Props> {
   render() {
-    const { onlyLogo, walletName } = this.props;
+    const { onlyLogo, walletName, location } = this.props;
 
     return (
       <Container onlyLogo={onlyLogo}>
@@ -74,9 +75,13 @@ class TopBar extends Component<Props> {
           <Logo />
           <Text>{walletName}</Text>
         </InfoContainer>
-        <InfoContainer>
-          <AppName>Tezori</AppName>
-        </InfoContainer>
+        {location.pathname === '/login' ? (
+          <InfoContainer>
+            <AppName>Tezori</AppName>
+          </InfoContainer>
+        ) : (
+          ''
+        )}
         <SettingsController onlySettings={onlyLogo} />
       </Container>
     );
